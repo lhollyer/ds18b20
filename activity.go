@@ -24,7 +24,7 @@ func (a *MyActivity) Metadata() *activity.Metadata {
 }
 
 // Eval implements activity.Activity.Eval
-func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
+func (a *MyActivity) Eval(context activity.Context) (done bool, err error) {
 
 	// do eval
 	sensors, err := ds18b20.Sensors()
@@ -35,10 +35,10 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error)  {
 	for _, sensor := range sensors {
 		t, err := ds18b20.Temperature(sensor)
 		if err == nil {
-			log.Debugf("sensor: %s temperature: %.2f°C\n", sensor, t)
+			context.SetOutput("result", "The Flogo engine says "+t)
+			log.Debugf("sensor: %s temperature: %d°C\n", sensor, t)
 		}
 	}
-
 
 	return true, nil
 }
