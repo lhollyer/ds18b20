@@ -1,12 +1,13 @@
 {
   "name": "ds18b20",
   "version": "0.0.1",
+  "title": "Setup DS18b20",
   "type": "flogo:activity",
   "description": "activity description",
   "author": "Your Name <you.name@example.org>",
   "inputs":[
     {
-      "name": "Pin",
+      "name": "pin",
       "type": "integer",
       "required": true
     }
