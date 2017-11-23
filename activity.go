@@ -44,5 +44,5 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error) {
 		}
 	}
 
-	return true, temp
+	return true, int(temp)
 }
