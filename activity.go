@@ -4,7 +4,6 @@ import (
 	"github.com/TIBCOSoftware/flogo-lib/core/activity"
 	"github.com/TIBCOSoftware/flogo-lib/logger"
 	"github.com/yryz/ds18b20"
-	"strconv"
 )
 
 var log = logger.GetLogger("activity-ds18b20")
