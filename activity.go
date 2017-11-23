@@ -40,9 +40,9 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error) {
 		if err == nil {
 			context.SetOutput("result", "The Flogo engine says "+strconv.Itoa(int(t)))
 			temp := t
-			log.Debugf("sensor: %s temperature: %d°C\n", sensor, t)
+			log.Debugf("sensor: %s temperature: %d°C\n", sensor, temp)
 		}
 	}
 
-	return true, t
+	return true, temp
 }
