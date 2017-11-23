@@ -33,16 +33,13 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error) {
 		panic(err)
 	}
 
-	temp := 1.0
-
 	for _, sensor := range sensors {
 		t, err := ds18b20.Temperature(sensor)
 		if err == nil {
-			context.SetOutput("result", "The Flogo engine says "+strconv.Itoa(int(t)))
-			temp := t
-			log.Debugf("sensor: %s temperature: %d°C\n", sensor, temp)
+			context.SetOutput("result", int(t))
+			log.Debugf("sensor: %s temperature: %d°C\n", sensor, t)
 		}
 	}
 
-	return true, int(temp)
+	return true, nil
 }
