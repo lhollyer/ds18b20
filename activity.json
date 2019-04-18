@@ -3,7 +3,7 @@
   "type": "flogo:activity",
   "ref": "github.com/lhollyer/ds18b20",
   "version": "0.0.1",
-  "title": "Setup ds18b20aaaaaa",
+  "title": "Setup ds18b20a",
   "description": "Setup ds18b20",
   "homepage": "https://github.com/lhollyer/ds18b20",
   "inputs":[
